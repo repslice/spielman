@@ -1,5 +1,5 @@
 Spielman::Application.routes.draw do
-  route :to => "home#index"
+  root :to => "home#index"
 
   devise_for :users
 
