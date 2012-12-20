@@ -9,6 +9,6 @@ class Bonspiel
   accepts_nested_attributes_for :teams
 
   validates_presence_of :name
-  validates :end_date, :date => { :after => :start_date, :message => "End date must be after start date" }
+  validates :end_date, :date => { :after => :start_date, :message => "End date must be greater than the start date" }
 
 end
