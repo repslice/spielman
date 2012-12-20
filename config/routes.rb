@@ -1,7 +1,15 @@
 Spielman::Application.routes.draw do
+  
+  resources :teams
+
+
+  resources :bonspiels
+
+
   root :to => "home#index"
 
   devise_for :users
+  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

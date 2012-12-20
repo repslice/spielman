@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @bonspiel.name %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @bonspiel.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @bonspiel.end_date %>
+</p>
+
+<%= link_to 'Add Team', new_team_path(@bonspiel) %> |
+<%= link_to 'Edit', edit_bonspiel_path(@bonspiel) %> |
+<%= link_to 'Back', bonspiels_path %>
+
+<% if @bonspiel.teams.size > 0 %>
+	<table class="table">
+		<% @bonspiel.teams.each do |team| %>
+		<tr>
+    		<td><%= link_to team.name, edit_team_path(team) %></td>
+		</tr>
+		<% end %>
+	</table>
+
+	<%= link_to 'Add Team', new_team_path(@bonspiel) %> |
+	<%= link_to 'Edit', edit_bonspiel_path(@bonspiel) %> |
+	<%= link_to 'Back', bonspiels_path %>
+<% end %>

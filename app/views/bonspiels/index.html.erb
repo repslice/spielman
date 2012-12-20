@@ -1,0 +1,27 @@
+<h1>Listing bonspiels</h1>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bonspiels.each do |bonspiel| %>
+  <tr>
+    <td><%= bonspiel.name %></td>
+    <td><%= bonspiel.start_date %></td>
+    <td><%= bonspiel.end_date %></td>
+    <td><%= link_to 'Show', bonspiel %></td>
+    <td><%= link_to 'Edit', edit_bonspiel_path(bonspiel) %></td>
+    <td><%= link_to 'Destroy', bonspiel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bonspiel', new_bonspiel_path %>
