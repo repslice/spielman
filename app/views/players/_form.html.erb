@@ -1,0 +1,65 @@
+<%= form_for(@player) do |f| %>
+  <% if @player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% @player.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :given_name %><br />
+    <%= f.text_field :given_name %>
+  </div>
+  <div class="field">
+    <%= f.label :surname %><br />
+    <%= f.text_field :surname %>
+  </div>
+  <div class="field">
+    <%= f.label :home_club %><br />
+    <%= f.text_field :home_club %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :delivering_hand %><br />
+    <%= f.text_field :delivering_hand %>
+  </div>
+  <div class="field">
+    <%= f.label :year_started_curling %><br />
+    <%= f.number_field :year_started_curling %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :throwing_order %><br />
+    <%= f.number_field :throwing_order %>
+  </div>
+  <div class="field">
+    <%= f.label :skip %><br />
+    <%= f.check_box :skip %>
+  </div>
+  <div class="field">
+    <%= f.label :vice %><br />
+    <%= f.check_box :vice %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

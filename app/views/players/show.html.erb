@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Given name:</b>
+  <%= @player.given_name %>
+</p>
+
+<p>
+  <b>Surname:</b>
+  <%= @player.surname %>
+</p>
+
+<p>
+  <b>Home club:</b>
+  <%= @player.home_club %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @player.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @player.state %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @player.country %>
+</p>
+
+<p>
+  <b>Delivering hand:</b>
+  <%= @player.delivering_hand %>
+</p>
+
+<p>
+  <b>Year started curling:</b>
+  <%= @player.year_started_curling %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @player.notes %>
+</p>
+
+<p>
+  <b>Throwing order:</b>
+  <%= @player.throwing_order %>
+</p>
+
+<p>
+  <b>Skip:</b>
+  <%= @player.skip %>
+</p>
+
+<p>
+  <b>Vice:</b>
+  <%= @player.vice %>
+</p>
+
+
+<%= link_to 'Edit', edit_player_path(@player) %> |
+<%= link_to 'Back', players_path %>
