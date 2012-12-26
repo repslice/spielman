@@ -32,6 +32,7 @@ gem "factory_girl_rails", ">= 4.0.0", :group => [:development, :test]
 gem "devise", ">= 2.1.2"
 gem "bootstrap-sass"
 gem "date_validator"
+gem "nested_form"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

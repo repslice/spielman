@@ -24,8 +24,8 @@
     <%= f.date_select :end_date %>
   </div>
  
-  <%= f.fields_for :teams do |builder| %>
-    <%= render "team_fields", :f => builder %>
+  <%= nested_form_for @bonspiel do |f| %>
+    <%= f.fields_for :teams %>
   <% end %>
     
   <div class="actions">
